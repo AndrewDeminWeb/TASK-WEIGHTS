@@ -1,0 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
+.containerGroup {
+	display: grid;
+	justify-content: center;
+
+	& * {
+		width: 100%;
+	}
+
+	.inputBlock {
+		margin-top: 50px;
+	}
+}
