@@ -27,7 +27,7 @@ function App() {
 				.map(([k, v]) => k === selectGroup && v)
 				.filter(Boolean)
 		);
-	}, [weights, selectGroup]);
+	}, [weights, selectGroup, sub]);
 
 	useEffect(() => {
 		setGetValueOfCalc(() => {
@@ -62,7 +62,7 @@ function App() {
 				<div>
 					{inputCalc &&
 						`Расчет ${(
-							getValueOfCalc?.[0]?.value * parseInt(inputCalc, 10)
+							getValueOfCalc?.[0].value * parseInt(inputCalc, 10)
 						).toFixed(1)} кг`}
 				</div>
 			</div>

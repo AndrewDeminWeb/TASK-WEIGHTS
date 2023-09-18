@@ -8,17 +8,17 @@ function BrandSizeSubgroup({
 }: React.PropsWithChildren<AnyData>) {
 	const selectRef = useRef<HTMLSelectElement | null>(null);
 
+	useEffect(() => {
+		setSub(
+			selectRef.current?.options[selectRef.current?.selectedIndex]?.textContent
+		);
+	}, [find]);
+
 	const selectHandlerSubgroup = useCallback(() => {
 		setSub(
 			selectRef.current?.options[selectRef.current?.selectedIndex]?.textContent
 		);
 	}, []);
-
-	useEffect(() => {
-		setSub(
-			selectRef.current?.options[selectRef.current?.selectedIndex]?.textContent
-		);
-	});
 
 	return (
 		<div>
